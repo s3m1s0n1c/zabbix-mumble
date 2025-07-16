@@ -5,6 +5,11 @@ We assume you have zabbix-agent/zabbix-agent2 already installed - If not Zabbix 
 
 https://www.zabbix.com/download?zabbix=7.4&os_distribution=ubuntu&os_version=22404&components=agent_2&db=&ws=
 
+We also asume you have ICE setup on your mumble server - If not see Mumble Server Configuration to Enable Ice below:
+
+https://www.mumble.info/documentation/mumble-server/scripting/ice/server-setup/
+
+
 # Install Dependencies for script
 
 `sudo apt install zeroc-ice-all-dev python3-zeroc-ice git`
