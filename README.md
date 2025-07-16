@@ -1,6 +1,6 @@
 # zabbix-mumble
 
-zabbix-mumble is a python script that will connect to your mumble-server and get stats for zabbix to ingest via the "Mumble Stats" zabbix template.
+zabbix-mumble is a python script that will connect to your mumble-server using ICE and get stats for zabbix to ingest via the "Mumble Stats" zabbix template.
 
 ****Note:****
 
