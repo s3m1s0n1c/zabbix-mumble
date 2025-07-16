@@ -27,7 +27,7 @@ https://www.zabbix.com/download?zabbix=7.4&os_distribution=ubuntu&os_version=224
 
 `sudo chmod u+x /usr/local/scripts/zabbix/zabbix-mumble.py`
 
-`sudo cp userparameter_mumble.conf /etc/zabbix/zabbix_agent2.d/` (Agent2) or `sudo cp userparameter_mumble.conf /etc/zabbix/zabbix_agent.d/` (Agent)
+`sudo cp userparameter_mumble.conf /etc/zabbix/zabbix_agent2.d/` (Agent2) or `sudo cp userparameter_mumble.conf /etc/zabbix/zabbix_agentd.d` (Agent)
 
 `sudo service zabbix-agent2 restart` or `service zabbix-agent restart`
 
