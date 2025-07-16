@@ -10,16 +10,25 @@ https://www.zabbix.com/download?zabbix=7.4&os_distribution=ubuntu&os_version=224
 
 # Install Zabbix-Mumble Script
 
-```git clone https://github.com/s3m1s0n1c/zabbix-mumble.git``
-```cd zabbix-mumble```
-```sudo mkdir /usr/share/slice```
-```sudo cp MumbleServer.ice /usr/share/slice```
-```sudo mkdir -p /usr/local/scripts/zabbix```
-```sudo cp zabbix-mumble.py /usr/local/scripts/zabbix```
-```sudo chown -R zabbix:zabbix /usr/local/scripts/zabbix```
-```sudo chmod u+x /usr/local/scripts/zabbix/zabbix-mumble.py```
-```sudo cp userparameter_mumble.conf /etc/zabbix/zabbix_agent2.d/ or /etc/zabbix/zabbix_agent.d/```
-```sudo service zabbix-agent2 restart or service zabbix-agent restart```
+`git clone https://github.com/s3m1s0n1c/zabbix-mumble.git`
+
+`cd zabbix-mumble`
+
+`sudo mkdir /usr/share/slice`
+
+`sudo cp MumbleServer.ice /usr/share/slice`
+
+`sudo mkdir -p /usr/local/scripts/zabbix`
+
+`sudo cp zabbix-mumble.py /usr/local/scripts/zabbix`
+
+`sudo chown -R zabbix:zabbix /usr/local/scripts/zabbix`
+
+`sudo chmod u+x /usr/local/scripts/zabbix/zabbix-mumble.py`
+
+`sudo cp userparameter_mumble.conf /etc/zabbix/zabbix_agent2.d/ or /etc/zabbix/zabbix_agent.d/`
+
+`sudo service zabbix-agent2 restart or service zabbix-agent restart`
 
 # Install Zabbix-Mumble Template in Zabbix
 
