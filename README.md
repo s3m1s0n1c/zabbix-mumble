@@ -2,6 +2,7 @@
 Zabbix python script to get stats from Mumble-Server 1.5
 
 We assume you have zabbix-agent/zabbix-agent2 already installed - If not Zabbix Agent2 install documentation below:
+
 https://www.zabbix.com/download?zabbix=7.4&os_distribution=ubuntu&os_version=22404&components=agent_2&db=&ws=
 
 # Install Dependencies for script
