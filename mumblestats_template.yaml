@@ -1,0 +1,86 @@
+zabbix_export:
+  version: '7.4'
+  template_groups:
+    - uuid: 7df96b18c230490a9a0a9e2307226338
+      name: Templates
+  templates:
+    - uuid: acbf1e66a0e1484782e90db989b48344
+      template: 'Mumble Stats'
+      name: 'Mumble Stats'
+      groups:
+        - name: Templates
+      items:
+        - uuid: 908a9bf4b9de4ce1baa25a04345f9ec0
+          name: 'Mumble  Ban Count'
+          key: 'mumble.value[bans]'
+          delay: 15m
+          history: 90d
+          value_type: FLOAT
+          tags:
+            - tag: Application
+              value: Mumble
+        - uuid: fb0a2295358c4b9cbeae210dc7e6a250
+          name: 'Mumble Channel Count'
+          key: 'mumble.value[channels]'
+          delay: 15m
+          history: 90d
+          value_type: FLOAT
+          tags:
+            - tag: Application
+              value: Mumble
+        - uuid: ba5e2467a71546a7b82a0337d5f611f2
+          name: 'Mumble Muted Users'
+          key: 'mumble.value[muted]'
+          delay: 15m
+          history: 90d
+          value_type: FLOAT
+          tags:
+            - tag: Application
+              value: Mumble
+        - uuid: fdd9279331864bde89c24e599acc9cac
+          name: 'Mumble Users Registered'
+          key: 'mumble.value[registered]'
+          delay: 15m
+          history: 90d
+          value_type: FLOAT
+          tags:
+            - tag: Application
+              value: Mumble
+        - uuid: eb142f67d39d45fc98f42ee0827aae27
+          name: 'Mumble Users Not Registered'
+          key: 'mumble.value[unregistered]'
+          delay: 15m
+          history: 90d
+          value_type: FLOAT
+          tags:
+            - tag: Application
+              value: Mumble
+        - uuid: 5a15a51ce5be41f3a35cec16aca655ca
+          name: 'Mumble Uptime'
+          key: 'mumble.value[uptime]'
+          delay: 15m
+          history: 90d
+          value_type: FLOAT
+          tags:
+            - tag: Application
+              value: Mumble
+        - uuid: bef139c26679401fa12d160f6ba12fe2
+          name: 'Mumble Users'
+          key: 'mumble.value[users]'
+          delay: 15m
+          history: 90d
+          value_type: FLOAT
+          tags:
+            - tag: Application
+              value: Mumble
+        - uuid: 02ceeb576aa34d859a20baec8c3fc5d5
+          name: 'Mumble Server - TCP Port Online'
+          key: 'net.tcp.listen[64738]'
+          delay: 15m
+          triggers:
+            - uuid: 338c60c898004c6086c78452057fc288
+              expression: 'last(/Mumble Stats/net.tcp.listen[64738])=0'
+              recovery_mode: RECOVERY_EXPRESSION
+              recovery_expression: 'last(/Mumble Stats/net.tcp.listen[64738])=1'
+              name: 'Mumble Server - Offline - No port connection'
+              priority: HIGH
