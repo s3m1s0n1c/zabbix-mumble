@@ -1,13 +1,20 @@
 # zabbix-mumble
-Zabbix python script to get stats from Mumble-Server 1.5
 
-We assume you have zabbix-agent/zabbix-agent2 already installed - If not Zabbix Agent2 install documentation below:
+zabbix-mumble is a python script that will connect to your mumble-server and get stats for zabbix to ingest via the "Mumble Stats" zabbix template.
+
+****Note:****
+
+We assume you have the following:
+
+* zabbix-agent/zabbix-agent2 installed - If not Zabbix Agent2 install documentation below:
 
 https://www.zabbix.com/download?zabbix=7.4&os_distribution=ubuntu&os_version=22404&components=agent_2&db=&ws=
 
-We also asume you have ICE setup on your mumble server - If not see Mumble Server Configuration to Enable Ice below:
+* ICE setup on your mumble server - If not see Mumble Server Configuration to Enable Ice below:
 
 https://www.mumble.info/documentation/mumble-server/scripting/ice/server-setup/
+
+* You have ROOT/sudo access to your mumble server
 
 
 # Install Dependencies for script
